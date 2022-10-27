@@ -96,9 +96,4 @@ public struct CallInformation {
       return platformURL
     }
   }
-
-  var isSwiftPackage: Bool {
-    guard case .swiftPackage = resourcesOrigin else { return false }
-    return true
-  }
 }

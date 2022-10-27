@@ -9,7 +9,7 @@
 import Foundation
 
 extension Struct {
-  func addingInternalProperties(forBundleIdentifier bundleIdentifier: String, isSwiftPackage: Bool) -> Struct {
+  func addingInternalProperties(forBundleIdentifier bundleIdentifier: String) -> Struct {
 
     let internalProperties = [
       Let(
@@ -18,7 +18,7 @@ extension Struct {
         isStatic: true,
         name: "hostingBundle",
         typeDefinition: .inferred(Type._Bundle),
-        value: isSwiftPackage ? "Bundle.module" : "Bundle(for: R.Class.self)"),
+        value: "Bundle.main"),
       Let(
         comments: [],
         accessModifier: .filePrivate,

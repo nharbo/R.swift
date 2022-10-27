@@ -207,7 +207,7 @@ public struct RswiftCore {
       .generatedStructs(at: callInformation.accessLevel, prefix: "")
 
     let externalStruct = externalStructWithoutProperties.addingInternalProperties(
-      forBundleIdentifier: callInformation.bundleIdentifier, isSwiftPackage: callInformation.isSwiftPackage)
+      forBundleIdentifier: callInformation.bundleIdentifier)
 
     let codeConvertibles: [SwiftCodeConverible?] = [
       HeaderPrinter(),
